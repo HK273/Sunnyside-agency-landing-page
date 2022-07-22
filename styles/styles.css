@@ -1,0 +1,367 @@
+/* ===============================================================================
+
+=================================================================================== */
+/* Import styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+/* Custom Properties  */
+
+:root {
+  /* Primary */
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  /* (graphic design text): */
+  --dark-desaturated-cyan: hsl(167, 40%, 24%);
+  /* photography text) */
+  --dark-blue: hsl(198, 62%, 26%);
+  /* (footer) */
+  --dark-moderate-cyan: rgb(69, 140, 126);
+  --moderate-cyan: #92d8c6;
+  --header-blue: #36b7ff;
+  --col-blue: #57c5fe;
+
+  /* Neutral */
+  --v-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --v-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish--blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+:root {
+  --font-family-primary: "Vollkorn", serif;
+  --font-family-secondary: "PT Sans", sans-serif;
+
+  --font-size-title: 32px;
+  --line-height-title: 1.4;
+  --font-size-caption: 14px;
+  --line-height-caption: 1.2;
+
+  --color-text: #222022;
+  --color-highlight-primary: #ffef7e;
+  --color-highlight-secondary: #b7f9e9;
+  --border-radius-primary: 32px;
+}
+
+/* Resets */
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: fill-available;
+  height: -webkit-fill-available;
+}
+body {
+  overflow-x: hidden;
+  /* mobile viewport bug fix */
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+/* ===================================================== */
+header {
+  background: url(../images/desktop/image-header.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* background-position: center; */
+  overflow: hidden;
+}
+.arrow {
+  position: relative;
+  left: calc(50% - 15px);
+  top: -15rem;
+}
+.flex-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  color: var(--white);
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  /* t-r-b-l */
+  margin-top: 20rem;
+}
+
+.content-header {
+  margin-top: -15rem;
+  margin-bottom: 17rem;
+}
+
+.header-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+/* col-one / four content */
+.content {
+  padding: 10rem 3rem 10rem 3rem;
+  text-align: center;
+}
+h2 {
+  color: var(--dark-blue);
+  font-family: "Fraunces", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.content-p {
+  color: var(--dark-grayish-blue);
+  font-family: "Barlow", sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+/* col-five & six */
+.content-centre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  max-width: 100%;
+  gap: 1ch;
+  /* t-r-b-l */
+  padding: 28rem 5rem 0 5rem;
+}
+.p-two {
+  color: var(--dark-desaturated-cyan);
+}
+/* LEARN MORE Underline styles */
+.a-btn-one {
+  color: var(--dark-blue);
+  font-family: "Fraunces", sans-serif;
+  font-size: 1.7rem;
+  background-image: linear-gradient(20deg, var(--yellow), var(--white));
+  background-size: 100% 25%;
+  background-repeat: no-repeat;
+  background-position: 0 85%;
+}
+.a-btn-one:hover {
+  background-image: linear-gradient(20deg, var(--soft-red), var(--white));
+  background-size: 100% 25%;
+  background-repeat: no-repeat;
+  background-position: 0 85%;
+}
+
+.a-btn-two {
+  color: var(--dark-blue);
+  font-family: "Fraunces", sans-serif;
+  font-size: 1.7rem;
+  background-image: linear-gradient(20deg, var(--soft-red), var(--white));
+  background-size: 100% 25%;
+  background-repeat: no-repeat;
+  background-position: 0 85%;
+}
+.a-btn-two:hover {
+  background-image: linear-gradient(20deg, var(--yellow), var(--white));
+  background-size: 100% 25%;
+  background-repeat: no-repeat;
+  background-position: 0 85%;
+}
+
+.grid-three,
+.grid-four {
+  height: 50rem;
+  color: white;
+  /* border: 1px solid black; */
+}
+.grid {
+  display: grid;
+}
+/* change column order */
+.col-two {
+  order: -1;
+}
+.images {
+  /* set img to fill box */
+  z-index: -1;
+  width: 100%;
+  height: 50rem;
+}
+
+.col-six {
+  background: url(../images/desktop/image-photography.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* background-position: center; */
+  overflow: hidden;
+}
+.col-five {
+  background: url(../images/desktop/image-graphic-design.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* background-position: center; */
+  overflow: hidden;
+}
+/* change section 4 to two columns */
+.grid-new {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Client Testimonials Section */
+.testimonials {
+  padding: 7rem 4rem 15rem 4rem;
+}
+.centre-h {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  max-width: 100%;
+  gap: 1ch;
+  margin-bottom: 7rem;
+  font-family: "Fraunces", sans-serif;
+  color: var(--grayish--blue);
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+}
+.sub-item {
+  /* t-r-b-l */
+  padding: 0 2rem 0 2rem;
+  margin-top: 6rem;
+  text-align: center;
+  /* border: 2px solid black; */
+}
+
+.img-profile {
+  border-radius: 10rem;
+  margin-bottom: 4rem;
+  width: 8rem;
+}
+
+.profile-desc {
+  font-size: 1.8rem;
+  color: var(--dark-grayish-blue);
+  font-family: "Barlow", sans-serif;
+  line-height: 1.6;
+  margin-bottom: 5rem;
+}
+h3 {
+  font-size: 1.8rem;
+  font-family: "Fraunces", sans-serif;
+  color: var(--v-dark-desaturated-blue);
+}
+.profile-job {
+  font-size: 1.6rem;
+  color: var(--grayish--blue);
+  font-family: "Barlow", sans-serif;
+}
+/* Footer */
+footer {
+  background-color: var(--moderate-cyan);
+  padding: 8rem 0 12rem 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.footer-logo {
+  margin-bottom: 4rem;
+}
+.footer-item {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  /* Space between links */
+  margin: 0 2rem;
+  color: var(--v-dark-grayish-blue);
+  font-size: 1.8rem;
+  transition: all 0.3s ease 0s;
+}
+.footer-item:hover {
+  color: var(--white);
+}
+.footer-links {
+  margin-bottom: 8rem;
+}
+.footer-social {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Desktop */
+@media screen and (min-width: 880px) {
+  @supports (grid-area: auto) {
+    header {
+      max-width: 1700px;
+      margin-inline: auto;
+      height: 75rem;
+      background: url(../images/desktop/image-header.jpg);
+      background-repeat: no-repeat;
+      background-size: 100% 75rem;
+      overflow: hidden;
+    }
+    .arrow {
+      position: relative;
+      left: calc(50% - 15px);
+      top: 0;
+    }
+    main {
+      /* Set max width for content */
+      max-width: 1700px;
+      margin-inline: auto;
+    }
+    .grid,
+    .grid-new {
+      display: grid;
+      /* equal columns repeating twice */
+      grid-template-columns: 1fr repeat(2, minmax(auto, 1fr)) 1fr;
+    }
+    /* span two columns */
+    .grid-three {
+      grid-column: span 2;
+    }
+    .col-two {
+      order: 0;
+    }
+    .sub-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      /* t-r-b-l */
+      /* padding: 20rem 4rem 15rem 4rem; */
+    }
+    .flex-header {
+      font-size: 3rem;
+    }
+    .sub-item {
+      margin-top: 0;
+    }
+    .content {
+      padding: 10rem 10rem 10rem 10rem;
+      text-align: left;
+    }
+    .content-header {
+      margin-top: -15rem;
+      margin-bottom: 0;
+    }
+    .testimonials {
+      padding: 10rem 4rem 15rem 4rem;
+    }
+  }
+}
